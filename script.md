@@ -1,19 +1,28 @@
 Thank you Nicolai,
-So java developers, running into difficult to debug production issues? Frustrating performance issues? Or just want to get a detailed understanding of how your application is performing in production? 
 
-Well JDK Flight recorder might be the tool for you! 
+Hey java developers, running into difficult to debug production issues? Frustrating performance issues? Or just want to get a detailed understanding of how your application is performing in production? All the above?
 
-JDK Flight Recorder, JFR, previously known as Java Flight Recorder before being open sourced as part of JDK 11, JEP 328, is a JVM tool for performing diagnostics and profiling data for a Java application and JVM. 
+I think we have all been there at one point or another in our careers
 
-I actually covered JFR in a recent SipOfJava. 
+[aside] or for you newer developers out there, you will be eventually
 
-What is key about JFR is it has very low overhead, allowing for it to be used in production, with an overhead of less than 1% in most use cases. Though this can vary depending upon system and configuration. 
+Well for these occasionas JDK Flight recorder might be the tool for you! 
+
+JDK Flight Recorder, JFR, previously known as Java Flight Recorder before being open sourced as part of JDK 11, JEP 328, is a JVM tool for performing diagnostics and profiling of Java applications and the JVM. 
+
+I actually covered JFR in a recent SipOfJava. You can check that out with a link in the description. 
 
 ## Using JFR
 
 JFR is enabled through the -XX:StartFlightRecording JVM arg. 
 
-The JVM will print to console the PID the Java application is running on, and how to deform a dump using JCMD (J Command) pulling data from the JVM.  
+What is key about JFR is it has very low overhead, with an overhead of less than 1% in most use cases. Though this can vary depending upon system and how JFR is configured.
+
+This allows JFR to be used in production settings, even under very heavy load production settings, without meaningfully impacting performance.
+
+JFR records events across the entire stack, from the OS layer, to the JVM, to the Java application itself. This allows you to get a clear picture of what is happening  through to  is able to have a small performance impact by writing to an in-memory buffer instead of to disk. 
+
+At initialization JVM will print to console the PID the Java application is running on, and how to deform a dump using JCMD (J Command) pulling data from the JVM.  
 
 Running a JCMD dump, will generate a JFR, java flight recording, file. 
 
