@@ -1,3 +1,5 @@
+# JFR Config
+
 `delay=time`
  <br/>
 
