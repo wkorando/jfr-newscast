@@ -1,3 +1,5 @@
+ #JFR Command
+ 
  ```
  jfr print recording.jfr
 
