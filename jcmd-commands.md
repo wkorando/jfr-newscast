@@ -7,14 +7,13 @@ jcmd -l
 Start JFR
 
 ```
-jcmd 10492 JFR.start
+jcmd 7065 JFR.start
 ```
 
 Dump JFR
 
-
 ```
-jcmd 10492 JFR.dump
+jcmd 7065 JFR.dump
 ```
 
 JFR Recording
